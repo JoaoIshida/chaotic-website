@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Greetings } from "@/ChaosLessons/HellChaos";
 import Name from "@/ChaosLessons/Name";
+import { FizzBuzzz } from "@/ChaosLessons/FizzBuzz"; // Import FizzBuzzz component
 import Image from "next/image";
 
 export default function Home() {
@@ -50,9 +51,11 @@ export default function Home() {
         <option value="">Select</option>
         <option value="name">Name</option>
         <option value="greetings">Greetings</option>
+        <option value="fizzbuzz">FizzBuzzz</option> {/* Add FizzBuzzz option */}
       </select>
       {selectedOption === "name" && <Name />}
       {selectedOption === "greetings" && <Greetings />}
+      {selectedOption === "fizzbuzz" && <FizzBuzzz />} {/* Render FizzBuzzz component */}
     </main>
   );
 }
