@@ -11,11 +11,13 @@ export function Greetings() {
     };
 
     return (
-        <div className="flex flex-row">
-            <div className="border border-black p-4 rounded-lg">
-                <textarea
-                    className="w-full h-48"
-                    value={`// src/components/Greeting.js
+        <div>
+            <h1 className='text-3xl font-bond text-black'>Title: Greetings My Friend</h1>
+            <div className="flex flex-row">
+                <div className="border border-black p-4 rounded-lg">
+                    <textarea
+                        className="w-full h-48"
+                        value={`// src/components/Greeting.js
 
 import React from 'react';
 
@@ -65,15 +67,16 @@ export function Greeting() {
 export default Greeting;
 
 `}
-                    readOnly
-                    onChange={(e) => setCode(e.target.value)}
-                />
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4" onClick={copyCodeToClipboard}>
-                    Copy to Clipboard
-                </button>
-            </div>
-            <div className="border p-4 rounded-lg mb-4">
-                <GreetByName />
+                        readOnly
+                        onChange={(e) => setCode(e.target.value)}
+                    />
+                    <button className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4" onClick={copyCodeToClipboard}>
+                        Copy to Clipboard
+                    </button>
+                </div>
+                <div className="border p-4 rounded-lg mb-4">
+                    <GreetByName />
+                </div>
             </div>
         </div>
     );

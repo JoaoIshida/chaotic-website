@@ -24,6 +24,7 @@ const Name = () => {
 
     return (
         <div>
+            <h1 className='text-3xl font-bond text-black'>Title: Simple print code</h1>
             <motion.div
                 className={`flex flex-row items-center justify-center ${isShaking ? 'shake' : ''}`}
                 animate={controls}

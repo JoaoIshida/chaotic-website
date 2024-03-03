@@ -4,7 +4,7 @@ import { Greetings } from "@/ChaosLessons/HellChaos";
 import Name from "@/ChaosLessons/Name";
 import { FizzBuzzz } from "@/ChaosLessons/FizzBuzz"; // Import FizzBuzzz component
 import { Comments } from "@/ChaosLessons/Comments";
-import Image from "next/image";
+import { Calc } from "@/ChaosLessons/Calc";
 
 export default function Home() {
   const [selectedOption, setSelectedOption] = useState("");
@@ -25,8 +25,8 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Welcome to the Chaos Lessons</h1>
+    <main className={`flex min-h-screen flex-col items-center justify-between p-24 ${selectedOption === "calculator" ? 'blink-bg' : ''}`}>
+      <h1 className={`blink text-3xl font-bold ${selectedOption === "calculator" ? 'blink-text' : ''}`}>Welcome to the Chaos Lessons</h1>
       <div className='flex flex-row justify-end'>
         <input
           type="checkbox"
@@ -54,11 +54,13 @@ export default function Home() {
         <option value="greetings">Greetings</option>
         <option value="fizzbuzz">FizzBuzzz</option>
         <option value="comments">Comments</option>
+        <option value="calculator">Calculator</option>
       </select>
       {selectedOption === "name" && <Name />}
       {selectedOption === "greetings" && <Greetings />}
       {selectedOption === "fizzbuzz" && <FizzBuzzz />}
       {selectedOption === "comments" && <Comments />}
+      {selectedOption === "calculator" && <Calc />}
     </main>
   );
 }
