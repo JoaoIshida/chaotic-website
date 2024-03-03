@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import Terminal from "@/components/Terminal";
-import Greetings from "@/ChaosLessons/HellChaos";
+import { Greetings } from "@/ChaosLessons/HellChaos";
 import Name from "@/ChaosLessons/Name";
 import Image from "next/image";
 

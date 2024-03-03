@@ -23,7 +23,7 @@ const Name = () => {
     };
 
     return (
-        <main>
+        <div>
             <motion.div
                 className={`flex flex-row items-center justify-center ${isShaking ? 'shake' : ''}`}
                 animate={controls}
@@ -91,7 +91,7 @@ export default HelloWorld;
                 </motion.div>
                 <motion.button
                     onClick={startFalling}
-                    className={`border p-4 rounded-lg mr-4 ${isFallingButton ? 'falling' : ''}`}
+                    className={`border p-4 rounded-lg hover:bg-blue-300 bg-blue-600 mr-4 ${isFallingButton ? 'falling' : ''}`}
                     animate={{ y: isFallingButton ? '65vh' : 0 }}
                     transition={{ duration: 0.25, ease: 'easeInOut' }}
                 >
@@ -105,7 +105,7 @@ export default HelloWorld;
                     <HelloWorld />
                 </motion.div>
             </motion.div>
-        </main>
+        </div>
     );
 };
 
