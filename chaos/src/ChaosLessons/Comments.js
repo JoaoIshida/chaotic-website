@@ -10,11 +10,13 @@ export function Comments() {
     };
 
     return (
-        <div className="flex flex-row">
-            <div className="border border-black p-4 rounded-lg">
-                <textarea
-                    className="w-400 h-48"
-                    value={`
+        <div ><h1 className='text-3xl font-bond text-black'>Title: a little comment to help</h1>
+            <div className="flex flex-row">
+
+                <div className="border border-black p-4 rounded-lg [w-400rem]">
+                    <textarea
+                        className="w-[400rem] h-48"
+                        value={`
 // This function serves the purpose of performing addition on two integer parameters, namely "num1" and "num2".
 // It encapsulates the fundamental arithmetic operation of addition, whereby the value of "num1" is added to the value of "num2".
 // The function employs a straightforward algorithm to execute this operation efficiently, ensuring reliable and accurate results.
@@ -56,14 +58,15 @@ export function Sum() {
     );
 }
 `}
-                    readOnly
-                    onChange={(e) => setCode(e.target.value)}
-                />
+                        readOnly
+                        onChange={(e) => setCode(e.target.value)}
+                    />
 
+                </div>
+                <div className="border p-4 rounded-lg mb-4">
+                    <Sum />
+                </div>
             </div>
-            <div className="border p-4 rounded-lg mb-4">
-                <Sum />
-            </div>
-        </div>
+        </div >
     );
 }
