@@ -1,8 +1,9 @@
-"use client";
-import { useState } from 'react';
+import React, { useState } from 'react';
 import GreetByName from "../components/GreetByName";
 
-export default function Greeting() {
+
+
+export function Greetings() {
     const [code, setCode] = useState("");
 
     const copyCodeToClipboard = () => {
@@ -10,17 +11,15 @@ export default function Greeting() {
     };
 
     return (
-
-
         <div className="flex flex-row">
-            <div className="border p-4 rounded-lg">
+            <div className="border border-black p-4 rounded-lg">
                 <textarea
                     className="w-full h-48"
                     value={`// src/components/Greeting.js
 
 import React from 'react';
 
-const Greeting = () => {
+export function Greeting() {
     // Variables
     let name = "Bob";
     name = name.toLowerCase();
@@ -61,7 +60,7 @@ const Greeting = () => {
     }
 
     return null; // Return null because this component doesn't render anything
-};
+}
 
 export default Greeting;
 
@@ -72,13 +71,10 @@ export default Greeting;
                 <button className="bg-blue-500 text-white px-4 py-2 rounded-lg mt-4" onClick={copyCodeToClipboard}>
                     Copy to Clipboard
                 </button>
-
-
             </div>
             <div className="border p-4 rounded-lg mb-4">
                 <GreetByName />
             </div>
         </div>
-
-    )
+    );
 }

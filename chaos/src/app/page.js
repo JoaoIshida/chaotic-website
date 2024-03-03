@@ -1,8 +1,9 @@
 "use client";
 import { useState, useEffect } from 'react';
-import Terminal from "@/components/Terminal";
-import Greetings from "@/ChaosLessons/HellChaos";
+import { Greetings } from "@/ChaosLessons/HellChaos";
 import Name from "@/ChaosLessons/Name";
+import { FizzBuzzz } from "@/ChaosLessons/FizzBuzz"; // Import FizzBuzzz component
+import { Comments } from "@/ChaosLessons/Comments";
 import Image from "next/image";
 
 export default function Home() {
@@ -51,9 +52,13 @@ export default function Home() {
         <option value="">Select</option>
         <option value="name">Name</option>
         <option value="greetings">Greetings</option>
+        <option value="fizzbuzz">FizzBuzzz</option>
+        <option value="comments">Comments</option>
       </select>
       {selectedOption === "name" && <Name />}
       {selectedOption === "greetings" && <Greetings />}
+      {selectedOption === "fizzbuzz" && <FizzBuzzz />}
+      {selectedOption === "comments" && <Comments />}
     </main>
   );
 }
