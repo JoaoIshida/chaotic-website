@@ -67,6 +67,5 @@ export function Sum() {
                     <Sum />
                 </div>
             </div>
-        </div >
-    );
+            );
 }
