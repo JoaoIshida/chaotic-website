@@ -1,3 +1,4 @@
+*This project was intended to have a chaotic design*
 # Chaotic Website
 
 This website was implemented in 12 hours during [Chaos Hackathon](https://systemshacks.com/) managed by Simon Fraser University's (SFU) Software Systems Student Society (SSSS).
